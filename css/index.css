@@ -1,0 +1,84 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #1C042E;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div {  
+  margin: 0 auto;
+  max-width: 790px; /* 790px is suitable for Sansung Tab S6 Lite. usually should be 960px = 60em;*/
+}
+
+main {
+  margin: 50% auto;  
+}
+
+p {
+  color: coral;
+}
+
+span {
+  /* color: whitesmoke; */
+  font-weight: normal;
+  font-style: italic;
+  font-size: .6em;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #1C042E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+.loading img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+}
+*/
+
+.logo-con {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}
+
+.logo-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0 0;
+}
+
+.logo-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+}
+
+.logo-img {
+  width: 20%;
+  height: auto;
+}

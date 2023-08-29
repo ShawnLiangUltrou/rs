@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>RapidStar</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/index.css" />
+  
+</head>
+
+<body>
+  <div class="loading">
+    <!--<img src="./img/game-loading.gif" />-->
+    <div class="logo-con">
+      <div class="logo-top">
+        <img class="logo-img" src="./img/loading.gif" />
+        <div class="logo-text">POKERS</div>
+      </div>
+      <div class="logo-bottom">
+        More ways to win
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+
+  //const configFileUrl = 'https://api2.rsg66.com:4434/config/profile' //正式環境
+  const configFileUrl = './profile.js' //開發環境
+  const now = new Date().getTime();
+  document.write('<script language="javascript" src="'+configFileUrl+'?t=' + now + '"><\/script\>');
+</script>
+<script>
+  try{
+    setTimeout(function () {
+    window.location.replace(config.url+'?platform=app&v='+config.version);
+  }, 100);
+  }catch(e) {
+    console.log(e)
+    window.location.href='./404.html'
+  }
+</script>
+
+</html>
