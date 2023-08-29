@@ -1,6 +1,2 @@
-const config = {
-  version: '1.0',
-	url: 'http://192.168.90.62:3002',
-	webUrl: 'http://192.168.90.62:3001'
-}
+const config = {version: '1.0',url: 'https://mobile.rsg66.com',webUrl: 'https://www.rsg66.com'}
 window.config = config
