@@ -44,6 +44,7 @@
   }
 </script>
 <script>
+if(needBackupProfile){
   try{
 	console.log(config)//觸發報錯
     setTimeout(function () {
@@ -52,6 +53,7 @@
   }catch(e) {
     window.location.href='./404.html'
   }
+}
 </script>
 <!--
 <script type="text/javascript" src="cordova.js"></script>
