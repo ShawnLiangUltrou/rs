@@ -24,22 +24,50 @@
   </div>
 </body>
 <script>
-
-
-  //const configFileUrl = 'https://api2.rsg66.com:4434/config/profile' //正式環境
-  const configFileUrl = './profile.js' //開發環境
+  const configFileUrl = 'https://aapi2.rsg66.com:4434/config/profile' //正式環境
+  //const configFileUrl = './profile.js' //開發環境
+  const backUpFileUrl = 'https://shawnliangultrou.github.io/rs/profile.js' //備選域名
   const now = new Date().getTime();
   document.write('<script language="javascript" src="'+configFileUrl+'?t=' + now + '"><\/script\>');
 </script>
 <script>
+  let needBackupProfile = false
   try{
+	console.log(config)//觸發報錯
     setTimeout(function () {
-    //window.location.replace(config.url+'?platform=app&v='+config.version);
+    window.location.replace(config.url+'?platform=app&v='+config.version);
   }, 100);
   }catch(e) {
     console.log(e)
-    window.location.href='./404.html'
+	document.write('<script language="javascript" src="'+backUpFileUrl+'?t=' + now + '"><\/script\>');
+	needBackupProfile = true
   }
 </script>
+<script>
+  try{
+	console.log(config)//觸發報錯
+    setTimeout(function () {
+      window.location.replace(config.url+'?platform=app&v='+config.version);
+    }, 100);
+  }catch(e) {
+    //window.location.href='./404.html'
+  }
+</script>
+<!--
+<script type="text/javascript" src="cordova.js"></script>
+<script>
+    //以下為獲取設備信息的DEMO代碼
+    document.getElementById("cordovaDevice").addEventListener("click", cordovaDevice);
+    function cordovaDevice() {
+        alert("Cordova version: " + device.cordova + "\n" +
+          "Device model: " + device.model + "\n" +
+          "Device platform: " + device.platform + "\n" +
+          "Device UUID: " + device.uuid + "\n" +
+          "Device version: " + device.version);
+    }
+    document.addEventListener("deviceready", onDeviceReady =>{
+        //cordova.exec 执行操作
+    }, false);
 
+</script>-->
 </html>
