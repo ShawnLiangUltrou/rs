@@ -35,7 +35,7 @@
   try{
 	console.log(config)//觸發報錯
     setTimeout(function () {
-    window.location.replace(config.url+'?platform=app&v='+config.version);
+    //window.location.replace(config.url+'?platform=app&v='+config.version);
   }, 100);
   }catch(e) {
     console.log(e)
@@ -48,7 +48,7 @@ if(needBackupProfile){
   try{
 	console.log(config)//觸發報錯
     setTimeout(function () {
-      window.location.replace(config.url+'?platform=app&v='+config.version);
+      //window.location.replace(config.url+'?platform=app&v='+config.version);
     }, 100);
   }catch(e) {
     window.location.href='./404.html'
